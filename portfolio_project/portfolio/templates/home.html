@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+  
+  
+  <!-- home section design -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello, It's Me</h3>
+      <h1>Subhash Dangi</h1>
+      <h3>And I'm a <span id="typing">Full-Stack Developer</span></h3>
+      <p class="text-base sm:text-lg font-normal text-gray-300 leading-relaxed max-w-3xl">
+  Full-stack developer with Django backend and modern frontend skills.<br>
+  I love building real–world tech solutions.
+</p>
+
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/subhash-dangi-068529291/"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/Subhashdangi205"><i class="bx bxl-github"></i></a>
+        <a href="https://x.com/Subhashdangi205?t=wJSoiI2ltk54h4NUgqnCYw&s=09"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/subhash_dangi23/?igsh=aGtybzJoOWZocjBv"><i class="bx bxl-instagram"></i></a>
+        
+      </div>
+      <a href="{% static 'files/ressume.pdf' %}" class="btn" download>Download Resume</a>
+
+      
+
+    </div>
+    <div class="home-img">
+      
+      <img src="{% static 'images/about 1.jpg' %}" alt="" />
+
+    </div>
+  </section>
+  
+  {% endblock %}
+ 
+  
+
+
+  
+  
+
+
+
+  

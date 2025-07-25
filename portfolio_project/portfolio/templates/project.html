@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="projects" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+    <div class="project-content">
+
+      <div class="project-box" data-url="https://wine-shop-taupe.vercel.app/">
+        <div class="project-img">
+          
+          <img src="{% static 'images/wine img.png' %}" alt="Wine App">
+        </div>
+        <div class="project-title">
+          <h3>Create a Wine  App</h3>
+        </div>
+      </div>
+      <div class="project-box" data-url="../food-app/online-food-order.html">
+        <div class="project-img">
+          <img src="{% static 'images/travel.png' %}" alt="Online Food Order App">
+        </div>
+        <div class="project-title">
+          <h3>Create Destination Paradise App</h3>
+        </div>
+      </div>
+      <div class="project-box" data-url="dangi%20traders/index.html">
+        <div class="project-img">
+          <img src="{% static 'images/jevellrey.png' %}" alt="E-commerce Website">
+        </div>
+        <div class="project-title">
+          <h3>Create DANGI Premium Jewels </h3>
+        </div>
+      </div>
+
+      
+
+      
+      <!-- daynamic add projects -->
+     
+      {% for project in projects %}
+      <div class="project-box" data-url="{{ project.url }}">
+      <div class="project-img">
+      <img src="{{ project.image.url }}" alt="{{ project.title }}">
+      </div>
+      <div class="project-title">
+      <h3>{{ project.title }}</h3>
+      </div>
+     </div>
+     {% endfor %}
+
+    </div>
+  </section>
+  {% endblock %}
+  <!-- your other HTML here -->
+

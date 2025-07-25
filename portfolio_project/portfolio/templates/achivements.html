@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="achivements" id="achivments">
+    <h2 class="heading">My<span>Achievements</span></h2>
+    <div class="achivements-content">
+
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        <img src="{% static 'images/cit.jpg' %}" alt="CIT Certificate">
+        <h3>(CIT) Participation Certificate by internshipstudio</h3>
+      </div>
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        <img src="{% static 'images/c.jpg' %}" alt="">
+        <h3>C Certificate by SSI Didital <br>Academy</h3>
+      </div>
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        <img src="{% static 'images/cpp.jpg' %}" alt="">
+        <h3>C++ Certificate by SSI Didital Academy</h3>
+      </div>
+
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        
+        <img src="{% static 'images/python 1.png' %}" alt="">
+        <h3>Python I by Code ninjas</h3>
+      </div>
+
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        
+        <img src="{% static 'images/python 2.png' %}" alt="">
+        <h3>Python II by Code ninjas</h3>
+      </div>
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+       
+        <img src="{% static 'images/html.png' %}" alt="">
+        <h3>HTML5 by Code ninjas</h3>
+      </div>
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        
+        <img src="{% static 'images/css.png' %}" alt="">
+        <h3>CSS by Code ninjas</h3>
+      </div>
+
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+       
+        <img src="{% static 'images/basic react.png' %}" alt="">
+        <h3>React by Code ninjas</h3>
+      </div>
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        
+        <img src="{% static 'images/react nativ.png' %}" alt="">
+        <h3>React Native by Code ninjas</h3>
+      </div>
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+       
+        <img src="{% static 'images/cloude 2.png' %}" alt="">
+        <h3>Describe cloud computing</h3>
+      </div>
+
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        
+        <img src="{% static 'images/cloude 3.png' %}" alt="">
+        <h3>Describe cloud services types</h3>
+      </div>
+
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+       
+        <img src="{% static 'images/cloude .png' %}" alt="">
+        <h3>Describe cloud services</h3>
+      </div>
+
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        
+        <img src="{% static 'images/cloude 4.png' %}" alt="">
+        <h3>Fundamental AI concepts</h3>
+      </div>
+      <div class="achivement-box">
+        <i class='bx bxs-trophy'></i><br>
+        
+        <img src="{% static 'images/hackerrank.png' %}" alt="">
+        <h3>CSS by HackerRank</h3>
+      </div>
+         {% for a in achievements %}
+      <div class="achivement-box">
+       <i class='bx bxs-trophy'></i><br>
+       <img src="{{ a.image.url }}" alt="{{ a.title }}">
+       <h3>{{ a.title }}</h3>
+     </div>
+     {% endfor %}
+    </div>
+  </section>
+{% endblock %}
